@@ -20,7 +20,7 @@ class ParentWindow(Frame):
         self.master.title("Student Tracking")
         self.master.configure(bg="#F0F0F0")
 
-        self.master.protocol("WM_DELETE_WINDOW", lambda: student_func.ask_quit(self))
+        self.master.protocol("WM_DELETE_WINDOW", lambda: student_func.os._exit(0)(self))
         arg = self.master
 
         student_gui.load_gui(self)
